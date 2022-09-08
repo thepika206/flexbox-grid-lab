@@ -24,3 +24,79 @@ body {
     Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
 }
+p {
+  margin: 0;
+}
+main.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 170px 1fr 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    'headline headline'
+    'occupation occupation'
+    'offer offer'
+    'phone chat';
+}
+
+main > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section#headline {
+  background-color: white;
+  grid-area: headline;
+  /* min-height: 200px; */
+}
+
+section#occupation {
+  background-color: lightgrey;
+  grid-area: occupation;
+}
+
+section#brand {
+  background-color: lightcoral;
+  display: none;
+}
+
+section#offer {
+  background-color: white;
+  grid-area: offer;
+}
+
+section#contact-phone{
+  background-color: lightgreen;
+  grid-area: phone;
+  font-size: xx-large;
+}
+section#contact-chat{
+  background-color: greenyellow;
+  grid-area: chat;
+  font-size: xx-large;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+div#status {
+  margin: 10px 0;
+  color: gray;
+  /* border: 1px solid red; */
+  align-self: end;
+  margin-right: 10px;
+}
+
+section#headline img {
+  border-radius: 50%;
+  border-color: 1px solid lightgreen;
+}
